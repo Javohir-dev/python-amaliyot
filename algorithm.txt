@@ -1,0 +1,15 @@
+# son_top_pc
+
+1. O'zi 1dan 10gacha bo'lgan sonlar ichidan birini tanlab `son` o'zgaruvchiga biriktirsin.
+2. Bizdan qiymat qabul qilib oldin.
+3. Qiymat >= 1 va qiymat <= 10.
+4. Agar qiymat `son` ga teng bo'lsa While sikli toxtasin va funksiya True qaytarsin.
+5. Agar qiymat `son` dan katta bo'lsa while sikli orqali boshidan qiymat qabul qilsin.
+6. Agar qiymat `son` don kichik bo'lsa ham shu agal.
+
+# son_top_my
+
+1. Bir 1dan 10gacha bo'lgan bir son yaratadi.
+2. Agar user `T` yuborsa Men topdim deb While toxtab funksiya True qaytarishi kerak.
+3. Agar user `+` yuborsa endi shu sondan 10gacha bo'gan son ichidan tanlab ko'ratsin.
+4. Agar user `-` yuborsa 1dan shu songacha bo'lgan oraliqda son taklif qilsin.
