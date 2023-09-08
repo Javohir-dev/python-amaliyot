@@ -44,5 +44,5 @@ import pickle
 
 
 with open('info','rb') as file:
-    talaba2 = pickle.load(file)
     talaba1 = pickle.load(file)
+    talaba2 = pickle.load(file)
