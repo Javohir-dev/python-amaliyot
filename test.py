@@ -188,36 +188,245 @@ import datetime
 # =============================================================================
 
 
-# Lambda
-result = lambda x, y: x ** y
+# =============================================================================
+# # Lambda
+# result = lambda x, y: x ** y
+# 
+# # print(result(12, 2))
+# n = result(6, 2)
+# 
+# def daraja(n):
+#     return lambda x : x**n
+# 
+# kvadrat = daraja(2)
+# kub = daraja(3)
+# # print(f"3-ning kvadrati {kvadrat(3)} ga, kubi {kub(3)} ga teng")
+# 
+# def func(i):
+#     return lambda x : x + i
+# 
+# ikki = func(2)
+# olti = func(6)
+# # print(f"3 + 2 = {ikki(3)}\n3 + 6 = {olti(3)}")
+# 
+# numbers = list(range(11))
+# kvadrat = list(map(lambda x : x*x, numbers))
+# 
+# import random as r
+# numbers2 = r.sample(range(101), 10)
+# juft_son = list(filter(lambda num: num%2==0, numbers2))
+# print(juft_son)
+# 
+# 
+# mevalar = ['olma','anor','anjir','shaftoli',"o'rik","tarvuz","qovun","banan"]
+# 
+# mevalar_b = list(filter(lambda meva:meva.startswith('a'),mevalar))
+# print(mevalar_b)
+# =============================================================================
 
-# print(result(12, 2))
-n = result(6, 2)
-
-def daraja(n):
-    return lambda x : x**n
-
-kvadrat = daraja(2)
-kub = daraja(3)
-# print(f"3-ning kvadrati {kvadrat(3)} ga, kubi {kub(3)} ga teng")
-
-def func(i):
-    return lambda x : x + i
-
-ikki = func(2)
-olti = func(6)
-# print(f"3 + 2 = {ikki(3)}\n3 + 6 = {olti(3)}")
-
-numbers = list(range(11))
-kvadrat = list(map(lambda x : x*x, numbers))
-
-import random as r
-numbers2 = r.sample(range(101), 10)
-juft_son = list(filter(lambda num: num%2==0, numbers2))
-print(juft_son)
 
 
-mevalar = ['olma','anor','anjir','shaftoli',"o'rik","tarvuz","qovun","banan"]
+import json
+from pprint import pprint
 
-mevalar_b = list(filter(lambda meva:meva.startswith('a'),mevalar))
-print(mevalar_b)
+# x = 10
+# x_json = json.dumps(x)
+
+# ism = "anvar"
+# ism_json = json.dumps(ism)
+
+# sonlar = [12, 45, 23, 67]
+# sonlar_json = json.dumps(sonlar)
+
+# bemor = {
+#   "ism": "Alijon Valiyev",
+#   "yosh": 30,
+#   "oila": True,
+#   "farzandlar": ("Ahmad","Bonu"),
+#   "allergiya": None,
+#   "dorilar": [
+#     {"nomi": "Analgin", "miqdori": 0.5},
+#     {"nomi": "Panadol", "miqdori": 1.2}
+#   ]
+# }
+
+# bemor_json = json.dumps(bemor)
+# with open('bemor.json','w') as f:
+#     json.dump(bemor,f)
+
+# sonlar = json.loads(sonlar_json)
+# bemor = json.loads(bemor_json)
+# # pprint(bemor)
+
+
+
+# import pickle
+
+# talaba1 = {'ism':'hasan', 'familiya':'husanov', 'tyil':2003, 'kurs': 2}
+# talaba2 = {'ism':'alijon', 'familiya':'valiyev', 'tyil':2004, 'kurs': 1}
+
+# with open('info','wb') as file:
+#     pickle.dump(talaba1,file)
+#     pickle.dump(talaba2,file)
+
+# with open('info','rb') as file:
+#     talaba1 = pickle.load(file)
+#     talaba2 = pickle.load(file)
+    
+# print(talaba1)
+
+# =============================================================================
+# age = input("Yoshingizni kiriting: ")
+# 
+# try:
+#     print(int(age))
+# except ValueError:
+#     print("Butun son kiriting!")
+# print(int(age))
+# print("Dastur ishlayapti.")
+# =============================================================================
+
+
+# def main(N):
+#     x = 0
+#     for n in list(range(1, N+1)):
+#         x += n
+    
+#     return x
+
+# def main(N):
+#     return N*(N+1)//2
+
+# # print(main(100))
+
+# def sarala(lst):
+#     return sorted(lst)
+
+# numbers = [1, 2, 5, 6, 8, 3, 9]
+
+# # print(sarala(numbers))
+
+# text = "Khamidullaev Javohir"
+# text = text.replace(" ", "")
+# lst = list(text)
+# # print(lst)
+
+# def tub_sonlar_oraliq(olcham):
+#     tublar = []
+#     for son in range(2, olcham + 1):
+#         tub = True
+#         for i in range(2, int(son**0.5) + 1):
+#             if son % i == 0:
+#                 tub = False
+#                 break
+#         if tub:
+#             tublar.append(son)
+#     return tublar
+
+# olcham = 30
+# natija = tub_sonlar_oraliq(olcham)
+# print(natija)  # Natija: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+
+def faktorial(son):
+    if son == 0:
+        return 1
+    else:
+        return son * faktorial(son - 1)
+
+def faktoriallar(N):
+    fakt = 1
+    i = 1
+    while i != N+1:
+        fakt *= i
+        i += 1
+
+    return fakt
+
+
+
+def  main(N):
+    if N == 0:
+        return 1
+    else:
+        return N * main(N - 1)
+    
+# print(main(5))
+# print(faktoriallar(5))
+
+
+def fibanachi(x):
+    fib = [0, 1]
+    while len(fib) < x:
+        fib.append(fib[-1] + fib[-2])
+    
+    return fib
+
+# print(fibanachi(10))
+    
+    
+    
+    
+def toplam_top(toplam):
+ 
+    return sum(toplam)
+
+n = [2, 3, 5, 7, 11, 13, 17, 19, 23, 28]
+
+    
+    
+def test(n):
+    fib = [0, 1]
+    while len(fib) < n:
+        fib.append(fib[-1] + fib[-2])
+        
+    return fib
+
+
+def test1(x):
+    tublar = []
+    for t in list(range(1, x+1)):
+        if t / 1 % 2 == 0 and t / t % 2 == 0:
+            tublar.append(t)
+    
+    return tublar
+
+
+
+
+def tub_sonlar_top(n):
+    tublar = []
+    for son in range(2, n + 1):
+        is_tub = True
+        for i in range(2, int(son ** 0.5) + 1):
+            if son % i == 0:
+                is_tub = False
+                break
+        if is_tub:
+            tublar.append(son)
+    return tublar
+
+# n = int(input("N raqamini kiriting: "))
+# tublar = tub_sonlar_top(n)
+# print(f"{n} gacha bo'lgan tub sonlar: {tublar}")
+
+class Test:
+    def __init__(self, ism, familiya):
+        self.familiya = familiya
+        self.__ism = ism
+        
+    def show_name(self):
+        return self.__ism
+        
+    def __repr__(self):
+        
+        return f"{self.__ism} {self.familiya}"
+        
+
+
+
+man = Test("Javohir", "Khamidullaev")
+
+
+
+
+
